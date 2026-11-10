@@ -1,14 +1,24 @@
-public class IT26102638_Lab6Q2a{
+import java.util.Scanner;
+
+public class IT26102638_Lab6Q2b{
 
     public static void main(String[]args){
 
-        int num;
-        num = 0;
+        Scanner input = new Scanner(System.in);
+        int[] numbers = new int[10];
 
-        while (num < 10){
-            num++;
-            System.out.print(num +" ");
+        System.out.println("Please enter 10 numbers: ");
+        
+
+        for(int i = 0; i < 10; i++){
+
+            System.out.print("Enter number " + (i+1) + " : ");
+            numbers[i] = input.nextInt();
         }
 
+        System.out.println("The numbers you entered are:");
+        for(int i = 0; i < numbers.length; i++){
+            System.out.print(numbers[i] + " ");
+        }
     }
 }
